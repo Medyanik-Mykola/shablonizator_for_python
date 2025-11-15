@@ -108,3 +108,9 @@ function createText() {
 // Кнопка згенерувати
 let generate_btn = document.getElementById("generate_btn");
 generate_btn.addEventListener("click", createText);
+
+console.log("Hello, World!!!")
+console.log("Hello, World!!!");
+console.log("Hello, World!!!");
+console.log("Hello, World!!!");
+console.log("Hello, World!!!");
