@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Шаблонізатор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="left">
+        <div class="module">
+          <h2>1. М1 Знайомство з Python</h2>
+          <ol class="hidden">
+            <li>М1У1 Введення в мову Python</li>
+            <li>М1У2 Форматовані рядки та перетворення типів</li>
+            <li>М1У3 Робота з рядками</li>
+            <li>М1У4 Проєкт та бліц-презентація</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>2. М2 Керуючі конструкції</h2>
+          <ol class="hidden">
+            <li>М2У1 Логічний тип даних. Умовний оператор.</li>
+            <li>М2У2 Вкладений умовний оператор</li>
+            <li>М2У3 Цикл for. Оператор in та функція range()</li>
+            <li>М2У4 Команда break і continue. Цикл while.</li>
+            <li>М2У5 Підсумок. Цикли і умови</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>3. М3 Функції та модулі</h2>
+          <ol class="hidden">
+            <li>М3У1 Створення функцій, оператор return</li>
+            <li>
+              М3У2 Аргументи функцій. Локальні і глобальні змінні
+            </li>
+            <li>М3У3 Підготовка до ВУ. Модулі random і time</li>
+            <li>М3У4 Відкритий урок. Презентація проєкту</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>4. М4 Модуль Turtle (черепашка)</h2>
+          <ol class="hidden">
+            <li>
+              М4У1 Знайомство з Turtle. Малюємо прості геометричні
+              фігури
+            </li>
+            <li>М4У2 Черепашка малюємо елементи картини.</li>
+            <li>М4У3 Черепашки - Списки. Малюнок за кодом.</li>
+            <li>М4У4 Підготовка до ВУ_1. Гра "Хрестики-Нулики"</li>
+            <li>М4У5 Підготовка до ВУ_2 Гра "Guess the word"</li>
+            <li>М4У6 Підготовка до Відкритого Уроку</li>
+            <li>М4У7 Відкритий урок. Презентація проєкту</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>5. M5 Об'єктно-орієнтоване програмування</h2>
+          <ol class="hidden">
+            <li>М5У1 ООП. Проєкт “Перегони”</li>
+            <li>М5У2 ООП. Події</li>
+            <li>М5У3 Гра "Впіймай яблуко"</li>
+            <li>М5У4 Графічний редактор "Малювалка"</li>
+            <li>М5У5 Класи, конструктор</li>
+            <li>М5У6 Практикум “Створення класів”</li>
+            <li>М5У7 Спадкування</li>
+            <li>М5У8 Візуальний квест на основі ООП</li>
+            <li>М5У9 Підготовка до ВУ</li>
+            <li>М5У10 Відкритий урок</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>6. М6 Створення ігор на Pygame</h2>
+          <ol class="hidden">
+            <li>М6У1 Знайомство з Pygame</li>
+            <li>М6У2 Розробляємо меню у грі</li>
+            <li>М6У3 Chrome Dinosaur, частина 1</li>
+            <li>М6У4 Chrome Dinosaur, частина 2</li>
+            <li>М6У5 Arkanoid, частина 1</li>
+            <li>М6У6 Arkanoid, частина 2</li>
+          </ol>
+        </div>
+        <div class="module">
+          <h2>7. M7 Підсумковий проєктний модуль. Створення гри</h2>
+          <ol class="hidden">
+            <li>М7У1 Створення проєкту на базі шаблону</li>
+            <li>М7У2 Створення гри, частина 2</li>
+            <li>М7У3 Тестування гри</li>
+            <li>М7У4 Підсумковий відкритий урок</li>
+          </ol>
+        </div>
+      </section>
+      <section class="main">
+        <div class="week">
+          <button class="day">ПН</button>
+          <button class="day">ВТ</button>
+          <button class="day">СР</button>
+          <button class="day">ЧТ</button>
+          <button class="day">ПТ</button>
+          <button class="day">СБ</button>
+          <button class="day">НД</button>
+        </div>
+        <div class="generate">
+          <h1>Кого варто покликати на відпрацювання?</h1>
+          <form>
+            <input type="text" name="kids" id="kids" />
+            <h1 class="confirm">
+              Урок:   <br>
+              День:   <br>
+              Кличемо:<br>
+            </h1>
+            <button id="generate_btn" type="button">Згенерувати</button>
+          </form>
+        </div>
+      </section>
+      <section class="right">
+        <p class="text-copy">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Dolor ipsam, explicabo nobis repellat a nostrum autem odit
+          facere eligendi dicta molestiae, aliquam veniam quasi labore
+          consequuntur quia exercitationem eum in. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Dolor ipsam,
+          explicabo nobis repellat a nostrum autem odit facere
+          eligendi dicta molestiae, aliquam veniam quasi labore
+          consequuntur quia exercitationem eum in. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Dolor ipsam,
+          explicabo nobis repellat a nostrum autem odit facere
+          eligendi dicta molestiae, aliquam veniam quasi labore
+          consequuntur quia exercitationem eum in. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Dolor ipsam,
+          explicabo nobis repellat a nostrum autem odit facere
+          eligendi dicta molestiae, aliquam veniam quasi labore
+          consequuntur quia exercitationem eum in. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Dolor ipsam,
+          explicabo nobis repellat a nostrum autem odit facere
+          eligendi dicta molestiae, aliquam veniam quasi labore
+          consequuntur quia exercitationem eum in.
+        </p>
+        <button class="copy">Copy</button>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

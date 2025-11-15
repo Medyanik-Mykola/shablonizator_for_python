@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap");
+
+* {
+  transition: 0.3s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f3f9;
+  color: #333;
+  line-height: 1.6;
+  /* НОВЕ: Запобігаємо прокрутці самого 'body', 
+    оскільки колонки керуватимуть своєю висотою.
+  */
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height: calc(100vh - 40px);
+}
+
+main section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+/* --- ЗМІНЕНО --- */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* НОВІ ВЛАСТИВОСТІ:
+    1. Встановлюємо максимальну висоту, 
+       рівну висоті екрану мінус відступи (20px + 20px).
+  */
+  max-height: calc(100vh - 40px);
+
+  /* 2. Додаємо прокрутку, якщо вміст колонки 
+       (модулі) вищий за max-height.
+  */
+  overflow-y: auto;
+}
+/* --- КІНЕЦЬ ЗМІН --- */
+
+.main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Стилі лівої колонки (модулі) --- */
+.left .module {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* background-color: #f9f9f9; <-- Ми видалили цей рядок */
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* НОВЕ: Задаємо різний фон для парних/непарних модулів */
+/* НОВЕ: Більш контрастне чергування фон */
+.left .module:nth-child(odd) {
+  background-color: #f9f7ff; /* Світлий, майже білий лавандовий */
+}
+.left .module:nth-child(even) {
+  background-color: #f0e6ff; /* Помітно темніший, насичений лавандовий */
+}
+
+.left .module h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #311b92;
+  margin: 0;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left .module ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.left .module li {
+  font-size: 14px;
+  color: #444;
+  padding: 10px 15px 10px 15px;
+
+  /* background-color: #fff; <-- ВИДАЛЕНО */
+  background-color: transparent; /* НОВЕ: робимо прозорим */
+  border-top: 1px solid #eee;
+  /* НОВЕ: Додаємо плавні переходи для Варіанту 2 */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* "Зебра" тепер затемнює фон, а не перекриває його */
+.left .module li:nth-child(even) {
+  /* background-color: #fcfcff; <-- ВИДАЛЕНО */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.02
+  ); /* НОВЕ: ледь помітне затемнення */
+}
+/* --- Стилі центральної колонки --- */
+.week {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.week .day {
+  background-color: #f0e6ff;
+  color: #5e35b1;
+  flex-grow: 1;
+}
+
+.week .day:hover {
+  background-color: #d1c4e9;
+}
+
+.generate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.generate h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #311b92;
+  margin-bottom: 20px;
+}
+
+.generate form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  align-items: stretch;
+}
+
+.generate input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.generate input[type="text"]:focus {
+  outline: none;
+  border-color: #5e35b1;
+}
+
+.generate button[type="button"] {
+  background-color: #5e35b1;
+  color: white;
+}
+
+.generate button[type="button"]:hover {
+  background-color: #4527a0;
+}
+
+/* --- Стилі правої колонки --- */
+.text-copy {
+  flex-grow: 1;
+  background-color: #fdfdfd;
+  border: 1px dashed #d1c4e9;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  overflow-y: auto;
+}
+
+.text-copy.animate{
+  box-shadow: 0px 0px 15px 5px #d1c4e9;
+}
+
+.copy {
+  background-color: #fdd835;
+  color: #333;
+  width: 100%;
+  margin-top: 15px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.copy:hover {
+  background-color: #fbc02d;
+}
+
+/* .copy::after {
+  content: "✅";
+  display: inline-block;
+  position: absolute;
+  right: -80px;
+  top: 80px;
+  opacity: 0;
+  font-size: 40px;
+  transition: 0.4s;
+}
+
+.copy.animate::after {
+  transform: translateX(-72px) scale(1.4) translateY(-68px);
+  opacity: 1;
+} */
+
+.hidden {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.left .module h2:hover {
+  background-color: #f0e6ff; /* Світло-фіолетовий фон */
+  transform: translateX(4px); /* Зсув вправо */
+}
+
+.left .module li:hover {
+  border-radius: 10px;
+  background-color: #dcc5fb; /* Той самий фон */
+  transform: translateX(8px); /* Більший зсув вправо */
+}
