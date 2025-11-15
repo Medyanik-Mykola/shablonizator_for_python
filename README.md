@@ -1,0 +1,1 @@
+# shablonizator_for_python
